@@ -71,7 +71,7 @@ def predict() -> None:
                           columns=['Make', 'Model', 'Year', 'Fuel Type', 'Transmission', 'Engine Size', 'Mileage'])
         df_transformed = turn_category_to_number(df, transformer)
         prediction = model.predict(df_transformed)
-        print(f"The predicted price of the car is: {'%.0f' % prediction[0]}")
+        print(f"The predicted price of the car is: {'%.0f' % prediction[0]} Doller")
 
     except Exception as error:
         print(f"Error: {error}")
